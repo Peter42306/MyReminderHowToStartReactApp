@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <div id="myApp1"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+    const user = {
+        id : 5,
+        age: 33,
+        height:185,
+        weight:90,
+        firstName: 'Tom',
+        lastName: 'Smith',
+        getFullName: function(){ 
+            return `${this.firstName} ${this.lastName}`;
+
+        }
+    };
+
+    // const userClassName = "user-info";
+
+    const styleObject1 = {
+        color:'red',
+        fontFamily:'Century Gothic'
+    };
+
+    ReactDOM.createRoot(document.getElementById("myApp1"))
+        .render(
+            <div style={styleObject1}>
+                <p>Name: {user.getFullName()}</p>
+            </div>
+
+        )
+
+
+
+    </script>
+</body>
+</html>
